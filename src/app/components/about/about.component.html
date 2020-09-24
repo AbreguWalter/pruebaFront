@@ -1,0 +1,29 @@
+<h1 class="animated fadeIn fast"> Tipos de Cambio en Peru</h1>
+<hr>
+<p class="animated fadeIn">
+    El tipo de cambio de los diferentes paises esta en funcion a como esta en Perú actualmente el cambio de cada moneda.
+</p>
+<div>
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Moneda Destino</th>
+                <th scope="col">Valor</th>
+                <th scope="col">Simbolo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let tc of tipoCambio'>
+                <th scope="row">{{ tc.id }}</th>
+                <td>{{ tc.monedaDestino | uppercase }}</td>
+                <td>{{ tc.value }}</td>
+                <td>{{ tc.simbolo }}</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+
+</div>

@@ -1,0 +1,32 @@
+<div class="jumbotron jumbotron-fluid animated fadeIn fast">
+    <div class="container">
+        <h1 class="display-4">Conversiones de Moneda</h1>
+        <p class="lead">Esta es una aplicacion de Tipo de Cambio.</p>
+    </div>
+</div>
+
+<div class="container">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Monto</th>
+                <th scope="col">Monto Origen</th>
+                <th scope="col">Moneda Destino</th>
+                <th scope="col">Monto Tipo Cambio</th>
+                <th scope="col">Tipo Cambio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let cm of conversion'>
+                <th scope="row">{{ cm.id }}</th>
+                <td>{{ cm.monto | uppercase }}</td>
+                <td>{{ cm.moneraOrigen }}</td>
+                <td>{{ cm.moneraDestino }}</td>
+                <td>{{ cm.montoTipoCambio }}</td>
+                <td>{{ cm.tipoCambio }}</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
